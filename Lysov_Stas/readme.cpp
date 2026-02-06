@@ -1,8 +1,26 @@
 #include <stdio.h>
 
-
 int main()
 {
-    printf("Hello, World!");
-    return 0;
+    int year = 2026;
+    int month = 2;
+
+    int salary = 100'001;
+    int capital = 0;
+
+    while (!(year == 2027 && month == 2)) {
+        if (month == 3){
+            salary = (salary * 1.5);
+        }
+
+        capital += salary;
+
+        ++month;
+        if (month == 13){
+            ++year;
+            month = 1;
+        }
+    }
+
 }
+printf("Salary = %d\n", salary);
